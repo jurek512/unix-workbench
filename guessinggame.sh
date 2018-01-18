@@ -1,3 +1,6 @@
+#!usr/bin/env bash
+# File: guessinggame.sh
+
 function echo_message {
     if [[ $answer -lt 0 ]]
     then
@@ -15,8 +18,7 @@ function echo_message {
 }
 
 files=$(ls -l|egrep "^total"|tr ' ' '\n'| tail -1)
-echo $files
-echo $files[1]
+
 echo "How many files are in the current directory?"
 let answer=-1
 while [[ $answer -ne $files ]]
